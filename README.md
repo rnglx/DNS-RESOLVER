@@ -20,7 +20,7 @@ chmod +x DNS-RESOLVER
 
 ./DNS-RESOLVER <dominio> <wordlist>
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ##### exemplo: ./DNS-RESOLVER example.com subd.txt
