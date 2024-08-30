@@ -1,5 +1,4 @@
-// espero que essa ferramenta te ajude! abs.  :)
-
+//Espero que te ajude! Abs. :)
 
 #include <stdio.h>
 #include <netdb.h>
@@ -11,6 +10,7 @@
 #define RED "\033[1;31m"
 #define YELLOW "\033[1;33m"
 #define RESET "\033[0m"
+#define CLEAR_LINE "\033[K"
 
 // Função para buscar subdomínios
 void buscarSubdominio(char *subdominio, char *dominio) {
@@ -20,13 +20,15 @@ void buscarSubdominio(char *subdominio, char *dominio) {
     sprintf(alvo, "%s%s", subdominio, dominio);
 
     // Mensagem de loading
-    printf(YELLOW "Procurando subdomínio: %s...\r" RESET, alvo);
+    printf(YELLOW "Procurando subdomínio: %s...\r" CLEAR_LINE RESET, alvo);
     fflush(stdout);
 
     host = gethostbyname(alvo);
 
     if (host != NULL) {
-        printf(GREEN "\n[+] Subdomínio encontrado: %s -> IP: %s\n" RESET, alvo, inet_ntoa(*((struct in_addr *)host->h_addr)));
+        // Apaga a linha de progresso anterior
+        printf("\r" CLEAR_LINE);
+        printf(GREEN "[+] Subdomínio encontrado: %s -> IP: %s\n" RESET, alvo, inet_ntoa(*((struct in_addr *)host->h_addr)));
     }
 }
 
