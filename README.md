@@ -11,9 +11,16 @@ Resolução de IP: Realiza a resolução DNS para obter o endereço IP dos subdo
 #### Uso:
 
 git clone https://github.com/rnglx/DNS-RESOLVER.git
+
 cd DNS-RESOLVER
+
 gcc DNS-RESOLVER.c -o DNS-RESOLVER
+
 chmod +x DNS-RESOLVER
+
 ./DNS-RESOLVER <dominio> <wordlist>
+
+
+
 
 ##### exemplo: ./DNS-RESOLVER example.com subd.txt
