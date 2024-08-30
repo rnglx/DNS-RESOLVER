@@ -5,6 +5,7 @@ A ferramenta faz a resolução DNS para descobrir se os subdomínios existem e e
 -------------------------------------------------------------------------------------------------------------------------------------------
 #### Funcionalidades
 Varredura de subdomínios: Utiliza uma wordlist para identificar subdomínios válidos em um domínio específico.
+
 Resolução de IP: Realiza a resolução DNS para obter o endereço IP dos subdomínios encontrados.
 
 ##### Obs: Junto com o codigo estou deixando uma wordlist com subdominios em PTBR :)
